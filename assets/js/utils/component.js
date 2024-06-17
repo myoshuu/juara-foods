@@ -1,27 +1,39 @@
-class MenuCard {
-  constructor(title, image, desc) {
-    this.title = title;
-    this.image = image;
-    // this.price = price;
-    this.desc = desc;
-    // this.icon = icon;
-    // this.rating = rating;
+class CardComponent extends HTMLElement {
+  constructor() {
+    super();
   }
 
-  render(container) {
-    if (container instanceof HTMLElement) {
-      const card = document.createElement("div");
-      card.className = "card";
+  static get observedAttributes() {
+    return ["title", "image", "desc", "rating", "icon"];
+  }
 
-      card.innerHTML = `
-      <img src="${this.image}" class="card-img-top w-75" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">${this.title}</h5>
-        <p class="card-text">${this.desc}</p>
+  coonnectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (oldValue !== newValue) {
+      this.render();
+    }
+  }
+
+  render() {
+    const title = this.getAttribute("title") || "Title";
+    const image = this.getAttribute("image") || "";
+    const desc = this.getAttribute("desc") || "Description";
+    const rating = this.getAttribute("rating") || 0;
+    const icon = this.getAttribute("icon") || "";
+
+    this.innerHTML = `
+      <div class="card" style="width: 18rem;">
+        <img src="assets/images/${image}" class="card-img-top" alt="${image}">
+        <div class="card-body">
+          <h4 class="card-title fw-semibold">${title}</h4>
+          <p class="card-text">${desc}</p>
+        </div>
       </div>
-      `;
-
-      container.appendChild(card);
-    } else console.error("Invalid container element");
+    `;
   }
 }
+
+customElements.define("card-component", CardComponent);
