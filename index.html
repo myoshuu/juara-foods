@@ -6,317 +6,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juara Foods</title>
   <link rel="stylesheet" href="assets/css/style.css">
-
-
 </head>
 
 <body>
-
-  <!-- start navbar -->
- <nav>
-  <div class="custom-navbar my-4">
-    <div class="container">
-
-      <div class="row">
-        <div class="d-flex flex-row-reverse">
-          <div class="nav-right">
-            <a href="#">Login/Register</a>
-          </div>
-          <div class="nav-right">
-            <a href="#">Contact Us</a>
-          </div>
-          <div class="nav-right">
-            <a href="#">About Us</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex">
-          <div class="logo">
-            <a href="#" class="logo">
-              <img src="assets/images/logo.png" alt="">
-            </a>
-          </div>
-          <div class="nav-left">
-            <a href="#">Home</a>
-          </div>
-          <div class="nav-left">
-            <a href="#">Menu</a>
-          </div>
-          <div class="nav-left">
-            <a href="#">Order Food</a>
-          </div>
-          <div class="call-us">
-            <img src="assets/images/icon call-abuabu.png" style="width: 18%;" alt="">
-            <p>Call us For Order</p>
-            <a href="#">+62-817-4423-2323</a>
-          </div>
-          <a href="#" class="custom-nav">
-            <img src="assets/images/keranjang.png" alt="">
-            <img src="assets/images/ordernow.png" alt="">
-          </a>
-      </div>
-      
+  <!-- Upper Nav -->
+  <div class="px-8 mx-auto">
+    <div class="py-4 border-b-2 text-end px-11">
+      <a href="#" class="text-black">About us</a> <span class="px-2 text-slate-300">|</span>
+      <a href="#" class="text-black">Contact Us</a> <span class="px-2 text-slate-300">|</span>
+      <a href="#" class="text-black">Login/Register</a>
     </div>
   </div>
-</nav>
-<!-- end navbar -->
+  <!-- End Upper Nav -->
 
-<!-- Hero Section start -->
- <section id="hero">
-  <div class="container">
-    <div class="row">
-      <img src="assets/images/lemon.png" class="rounded float-start" style="width: 10%;" alt="">
-      <img src="assets/images/paketelor.png" class="rounded float-end" style="width: 19%;" alt="">
-      <img src="assets/images/paketelor2.png" style="width: 19%;" alt="">
-      <img src="assets/images/sotoayam.png" style="width: 27%;" alt="">
-      <img src="assets/images/tomat.png" class="rounded float-start" style="width: 10%;" alt="">
-      <img src="assets/images/wortel.png" class="rounded float-end" style="width: 10%;" alt="">
-      <div class="col-md-6">
-        <h1 class="fw-bold">Welcome To Our JUARA <span class="text-danger">Foods</span></h1>
-        <p>Di Juara Food, kami mengajak Anda untuk menikmati kelezatan autentik dari kuliner Indonesia dan Jepang. Kami menyajikan beragam pilihan menu yang memadukan cita rasa tradisional dengan sentuhan modern, sehingga setiap hidangan yang kami tawarkan mampu memuaskan selera Anda.</p>
-        <div class="search-bar">
-          <form action="#">
-            <input type="text" placeholder="Search food or drink">
-            <button class="submit-btn">Search</button>
-          </form>
-        </div>
-      </div>
+  <!-- Main Navbar -->
+  <nav class="container flex items-center justify-between mx-auto mt-4">
+    <div class="flex items-center">
+      <img class="w-40 mr-14" src="assets/images/logo.png" alt="">
+      <ul class="flex items-center text-lg gap-x-16">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Order Food</a></li>
+        <li>
+          <div class="flex items-center gap-x-5">
+            <i class="text-2xl text-gray-700 fa-solid fa-phone"></i>
+            <div class="text-lg">
+              <p>Call us For Order</p>
+              <a class="font-semibold text-primary" href="#">+62-817-4423-2323</a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="cards-foods">
-      <div class="row row-cols-1 row-cols-md-5">
-        <div class="col">
-            <img src="assets/images/nasipadang.png" style="width: 40%;" class="card-img-top" alt="">
-            <div class="card-body">
-              <h6 class="card-title">Nasi Padang</h6>
-            </div>
-        </div>
-        <div class="col">
-            <img src="assets/images/gadogado.png" style="width: 40%;" class="card-img-top" alt="">
-            <div class="card-body">
-              <h6 class="card-title">Gado Gado</h6>
-            </div>
-        </div>
-        <div class="col">
-            <img src="assets/images/esacendol.png" style="width: 40%;" class="card-img-top" alt="">
-            <div class="card-body">
-              <h6 class="card-title">Es Cendol</h6>
-            </div>
-        </div>
-        <div class="col">
-            <img src="assets/images/misochicken.png" style="width: 40%;" class="card-img-top" alt="">
-            <div class="card-body">
-              <h6 class="card-title">Miso Chicken</h6>
-            </div>
-        </div>
-        <div class="col">
-            <img src="assets/images/yakitori.png" style="width: 40%;" class="card-img-top" alt="">
-            <div class="card-body">
-              <h6 class="card-title">Yakitori</h6>
-            </div>
-        </div>
+    <div class="flex items-center gap-x-12">
+      <div class="relative inline-block">
+        <i class="text-3xl text-gray-600 fa-solid fa-cart-shopping"></i>
+        <span
+          class="absolute top-0 right-0 px-2 py-1 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2 bg-yellow-500 rounded-full">5</span>
       </div>
+      <a href="#"
+        class="px-4 py-2 text-white transition-shadow duration-200 rounded-full bg-primary hover:shadow-lg">Order
+        Now</a>
     </div>
-    <div class="card-promo">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="assets/images/rawon.png" class="img-fluid rounded-start" alt="">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h4 class="card-title">RAWON</h4>
-              <p class="card-text ">get a <span class="fw-bold">20%</span> discount on <span class="fw-bold">first order</span></p>
-              <p class="card-text fw-bold">Rp.18.000</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="assets/images/sushi.png" class="img-fluid rounded-start" alt="">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h4 class="card-title">SUSHI</h4>
-              <p class="card-text ">get a <span class="fw-bold">20%</span> discount on <span class="fw-bold">first order</span></p>
-              <p class="card-text fw-bold">Rp.22.000</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="assets/images/esteh.png" class="img-fluid rounded-start" alt="">
-            <img src="assets/images/bakso.png" class="img-fluid rounded-start" alt="">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h4 class="card-title">RAWON</h4>
-              <p class="card-text ">get a <span class="fw-bold">20%</span> discount on <span class="fw-bold">first order</span></p>
-              <p class="card-text fw-bold">Rp.20.000</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- </section>
+  </nav>
+  <!-- End Main Navbar -->
 
- <!-- Menu Section -->
-  <section id="popular-menus">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="tittle fw-bold">Popular <span class="text-danger">Menus</span></h2>
-          <button type="button" class="btn btn-outline-danger">Indonesian Foods</button>
-          <button type="button" class="btn btn-outline-danger">Drinks</button>
-          <button type="button" class="btn btn-outline-danger">Japanese Foods</button>
+  <!-- Hero Section -->
+  <section class="container relative mx-auto mt-16">
+    <img class="absolute z-0 opacity-40 -top-28 -left-28" src="assets/images/lemon.png" alt="">
+    <img class="absolute z-0 bottom-36 opacity-40 -left-28" src="assets/images/tomat.png" alt="">
+    <img class="absolute z-40 transform scale-75 -top-40 -right-44" src="assets/images/paketelor2.png" alt="">
+    <img class="absolute z-40 transform scale-90 bottom-20 -right-20" src="assets/images/paketelor.png" alt="">
+    <img class="absolute z-0 bottom-36 -right-40" src="assets/images/wortel.png" alt="">
+
+
+    <div class="grid grid-cols-2 ">
+      <div>
+        <h1 class="mb-4 text-5xl font-bold">Welcome To</h1>
+        <h2 class="mb-8 text-5xl font-bold drop-shadow-lg">Our <span class="text-primary">JUARA</span> Foods</h2>
+        <p class="w-10/12 mb-6 text-lg">
+          At Juara Food, we invite you to enjoy the authentic flavors of Indonesian and Japanese cuisine.
+          Our menu blends traditional tastes with modern touches, ensuring every dish satisfies your palate.
+          Join us for a dining experience that bridges heritage and contemporary cuisine, making every meal at Juara
+          Food unforgettable.
+        </p>
+        <div class="flex mt-10 mb-6">
+          <div class="relative">
+            <input type="text" placeholder="Search food or drink"
+              class="p-3 pl-4 pr-24 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+            <button
+              class="absolute right-0 px-5 py-2 mt-2 mr-2 text-white bg-black rounded-full -top-[3px] uppercase">search</button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card-popular-menus">
-            <div class="card-group grid gap-3">
-              <div class="card">
-                <img src="assets/images/sotobanjar.png" style="width: 40%;" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Soto Banjar</h5>
-                  <p class="card-text"><small class="fw-bold">Rp.22.000</small></p>
-                  <p class="card-text"><small>Lorem ipsum dolor, sit amet rels</small></p>
-                  <button>Beli Sekarang</button>
-                </div>
-              </div>
-              <div class="card">
-                <img src="assets/images/lontongsayur.png" style="width: 40%;" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Lontong Sayur</h5>
-                  <p class="card-text"><small class="fw-bold">Rp.18.000</small></p>
-                  <p class="card-text"><small>Lorem ipsum dolor, sit amet rels</small></p>
-                  <button>Beli Sekarang</button>
-                </div>
-              </div>
-              <div class="card">
-                <img src="assets/images/rendangsapi.png" style="width: 40%;" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Rendang Sapi</h5>
-                  <p class="card-text"><small class="fw-bold">Rp.25.000</small></p>
-                  <p class="card-text"><small>Lorem ipsum dolor, sit amet rels</small></p>
-                  <button>Beli Sekarang</button>
-                </div>
-              </div>
-            </div>
-            <div class="btn-bottom text-center">
-              <button>See all Menus</button>
-            </div>
-          </div>
+      <div class="relative justify-self-end">
+        <div
+          class="relative flex items-center justify-center overflow-hidden rounded-full bg-primary w-[25rem] h-[25rem]">
+          <img src="assets/images/sotoayam.png" alt="Main Food Image"
+            class="absolute left-0 z-50 object-cover w-full h-full transform scale-75 rounded-full -top-10">
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-16">
+      <div class="grid grid-cols-5 gap-6 text-center">
+        <div>
+          <img src="assets/images/nasipadang.png" alt="Nasi Padang" class="object-cover mx-auto rounded-full w-36 h-36">
+          <h3 class="mt-4 text-lg font-semibold">Nasi Padang</h3>
+        </div>
+        <div>
+          <img src="assets/images/gadogado.png" alt="Gado-Gado" class="object-cover mx-auto rounded-full w-36 h-36">
+          <h3 class="mt-4 text-lg font-semibold">Gado-Gado</h3>
+        </div>
+        <div>
+          <img src="assets/images/esacendol.png" alt="Es Cendol" class="object-cover mx-auto rounded-full w-36 h-36">
+          <h3 class="mt-4 text-lg font-semibold">Es Cendol</h3>
+        </div>
+        <div>
+          <img src="assets/images/misochicken.png" alt="Miso Chiken"
+            class="object-cover mx-auto rounded-full w-36 h-36">
+          <h3 class="mt-4 text-lg font-semibold">Miso Chicken</h3>
+        </div>
+        <div>
+          <img src="assets/images/yakitori.png" alt="Yakitori" class="object-cover mx-auto rounded-full w-36 h-36">
+          <h3 class="mt-4 text-lg font-semibold">Yakitori</h3>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Hero Section -->
 
-  <!-- Gallery Section -->
-   <section id="gallery">
-    <div class="container">
-      <div class="row">
-        <h2 class="tittle fw-bold text-center">Foods <span class="text-danger">Gallery</span></h2>
-      </div>
-      <div class="container-images">
-        <img src="assets/images/bajigur.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/ramen.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/chickenchasu.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/misosoup.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/indelcumi.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/jus.png" alt="">
-      </div>
-      <div class="container-images">
-        <img src="assets/images/sopjagung.png" alt="">
+  <!-- Hero Section Banner -->
+  <div class="flex items-center mt-40">
+    <div class="w-full ">
+      <div class="grid grid-cols-3">
+        <!-- Rawon -->
+        <div class="relative flex items-center justify-between h-64 p-6 text-white bg-primary">
+          <div class="pl-8">
+            <h2 class="text-3xl font-bold">RAWON</h2>
+            <p class="mt-2 text-xl">get a <span class="font-bold">20% discount</span><br>on <span
+                class="font-bold">first
+                order</span></p>
+            <p class="mt-4 text-xl">Rp.18.000</p>
+          </div>
+          <img src="assets/images/rawon.png" alt="Rawon" class="absolute -top-2 -right-20">
+        </div>
+        <!-- Sushi -->
+        <div class="relative z-40 flex items-center justify-between p-6 text-white bg-black">
+          <div class="pl-8">
+            <h2 class="text-3xl font-bold">SUSHI</h2>
+            <p class="mt-2 text-xl">get a <span class="font-bold">20% discount</span><br>on <span
+                class="font-bold">first
+                order</span></p>
+            <p class="mt-4 text-xl">Rp.22.000</p>
+          </div>
+          <img src="assets/images/sushi.png" alt="Sushi" class="absolute -right-28">
+        </div>
+        <!-- Bakso and Es Teh -->
+        <div class="relative z-40 flex items-center justify-between p-6 text-white bg-yellow-500 ">
+          <div class="pl-8">
+            <h2 class="text-3xl font-bold">BAKSO and ES TEH</h2>
+            <p class="mt-2 text-xl">get a <span class="font-bold">20% discount</span><br>on <span
+                class="font-bold">first
+                order</span></p>
+            <p class="mt-4 text-xl">Rp.20.000</p>
+
+          </div>
+          <div class="">
+            <img src="assets/images/bakso.png" alt="Bakso and Es Teh"
+              class="relative z-20 transform scale-90 top-6 right-2">
+            <img src="assets/images/esteh.png" alt="Bakso and Es Teh"
+              class="absolute z-10 transform scale-90 right-28 -top-8">
+          </div>
+        </div>
       </div>
     </div>
-   </section>
-
-<!-- footer start -->
-<footer>
-  <div class="wrapper">
-    <div class="logo">
-      <img src="assets/images/logoputih.png" alt="">
-    </div>
-  <div class="search-bar">
-    <form action="#">
-      <input type="text" placeholder="Enter Email Address">
-      <button class="submit-btn">Send</button>
-    </form>
   </div>
-    <div class="links-container">
-      <div class="links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Order Food</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      
-      <div class="links">
-        <h3>Our Menus</h3>
-        <ul>
-          <li><a href="#">Ikan Bakar</a></li>
-          <li><a href="#">Nasi Kuning</a></li>
-          <li><a href="#">Es Cendol</a></li>
-          <li><a href="#">Sushi</a></li>
-        </ul>
-      </div>
+  <!-- End Hero Section Banner -->
 
-      <div class="links">
-        <h3>Get In Touch</h3>
-        <ul>
-          <li><img src="assets/images/icon location.png" alt="">
-            <a href="#">Jalan Diponegoro No. 45, Kelurahan Mangunsari, Kecamatan Sidomukti, Kota Salatiga.</a>
-          </li>
-          <li><img src="assets/images/icon call-merah.png" alt="">
-            <a href="#">+62-817-4423-2323</a>
-          </li>
-          <li><img src="assets/images/icon mail.png" alt="">
-            <a href="#">juarafood@gmail.com</a>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="links">
-        <h3>Social Media</h3>
-        <ul>
-          <li><img src="assets/images/icon instagram.png" alt="">
-            <a href="#">JuaraFoods</a>
-          </li>
-          <li><img src="assets/images/icon facebook.png" alt="">
-            <a href="#">JuaraFoods</a>
-          </li>
-          <li><img src="assets/images/icon gojek.png" alt="">
-            <a href="#">JuaraFoods</a>
-          </li>
-        </ul>
+  <!-- Menu Section -->
+  <div class="container px-4 py-8 mx-auto">
+    <h1 class="mb-8 text-4xl font-bold text-center">Popular <span class="text-primary">Menus</span></h1>
+    <div class="flex justify-center mb-8 space-x-4">
+      <button class="px-4 py-2 text-white rounded-full bg-primary">Indonesian Foods</button>
+      <button class="px-4 py-2 border-2 rounded-full text-primary border-primary">Drinks</button>
+      <button class="px-4 py-2 border-2 rounded-full text-primary border-primary">Japanese Foods</button>
+    </div>
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1 -->
+      <div class="relative p-4 border-2 border-gray-300 rounded-lg max-w-80">
+        <img src="assets/images/sotobanjar.png" alt="Soto Banjar" class="object-cover w-full h-40 rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-xl font-bold">Soto Banjar</h2>
+          <p class="text-gray-500">Rp.22.000</p>
+          <p class="mt-2 text-gray-500">Lorem ipsum dolor, sit amet rels</p>
+          <div class="flex items-center mt-2">
+            <div class="flex space-x-1 text-yellow-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <button class="w-full py-2 mt-4 text-black bg-white border-2 border-gray-300 rounded-full">BELI
+            SEKARANG</button>
+        </div>
+        <button class="absolute text-gray-500 top-4 right-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </button>
       </div>
 
     </div>
-    <p class="copyright">Copyright 2024 Juara Foods. All Right Reserved</p>
+    <div class="flex justify-center mt-8">
+      <button class="px-6 py-2 text-white rounded-full bg-primary">See all Menus</button>
+    </div>
   </div>
-</footer>
-<!-- footer end -->
- 
-  <script src="assets/js/utils/loadBootstrap.js"></script>
+
+
+  <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
