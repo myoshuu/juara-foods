@@ -27,16 +27,16 @@ class CardComponent extends HTMLElement {
 
   render() {
     const title = this.getAttribute("title") || "Title";
-    const image = this.getAttribute("image") || "";
+    const image = this.getAttribute("image") || "No Image";
     const desc = this.getAttribute("desc") || "Description";
     const rating = parseInt(this.getAttribute("rating")) || 0;
-    const price = this.getAttribute("price") || "";
+    const price = this.getAttribute("price") || "15.000";
 
     this.innerHTML = `
     <div class="mx-auto overflow-hidden bg-white border border-gray-200 rounded-2xl max-w-80 max-h-[120rem]">
       <div class="relative">
         <div class="flex items-center justify-center">
-          <img src="${image}" alt="Soto Banjar" class="relative w-64 -top-7">
+          <img src="assets/images/${image}" alt="Soto Banjar" class="relative w-64 -top-7">
         </div>
         <button class="absolute p-3 text-gray-500 top-2 right-2">
           <i class="text-2xl fa-regular fa-heart"></i>
@@ -44,7 +44,7 @@ class CardComponent extends HTMLElement {
       </div>
       <div class="p-4">
         <h2 class="text-3xl font-semibold">${title}</h2>
-        <p class="text-xl text-gray-600">${price}</p>
+        <p class="text-xl text-gray-600">Rp. ${price}</p>
         <p class="mt-2 text-gray-500">${desc}</p>
         <div class="flex items-center mt-2">
           <div class="flex space-x-1 text-xl text-yellow-400">    
