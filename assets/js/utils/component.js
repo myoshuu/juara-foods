@@ -43,7 +43,7 @@ class CardComponent extends HTMLElement {
         </button>
       </div>
       <div class="p-4">
-        <h2 class="text-3xl font-semibold">${title}</h2>
+        <h2 class="text-2xl font-semibold">${title}</h2>
         <p class="text-xl text-gray-600">Rp. ${price}</p>
         <p class="mt-2 text-gray-500">${desc}</p>
         <div class="flex items-center mt-2">
