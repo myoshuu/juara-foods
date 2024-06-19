@@ -5,12 +5,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transaction</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+  <!-- Upper Nav -->
+  <div class="px-8 mx-auto">
+    <div class="py-4 border-b-2 text-end px-11">
+      <a href="#" class="text-black">About us</a> <span class="px-2 text-slate-300">|</span>
+      <a href="#" class="text-black">Contact Us</a> <span class="px-2 text-slate-300">|</span>
+      <a href="#" class="text-black">Login/Register</a>
+    </div>
+  </div>
+  <!-- End Upper Nav -->
 
+  <!-- Main Navbar -->
+  <nav class="container flex items-center justify-between mx-auto mt-4">
+    <div class="flex items-center">
+      <img class="w-40 mr-14" src="assets/images/logo.png" alt="">
+      <ul class="flex items-center text-lg gap-x-16">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Order Food</a></li>
+        <li>
+          <div class="flex items-center gap-x-5">
+            <i class="text-2xl text-gray-700 fa-solid fa-phone"></i>
+            <div class="text-lg">
+              <p>Call us For Order</p>
+              <a class="font-semibold text-primary" href="#">+62-817-4423-2323</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-x-12">
+      <div class="relative inline-block">
+        <i class="text-3xl text-gray-600 fa-solid fa-cart-shopping"></i>
+        <span
+          class="absolute top-0 right-0 px-2 py-1 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2 bg-yellow-500 rounded-full">5</span>
+      </div>
+      <a href="#"
+        class="px-4 py-2 text-white transition-shadow duration-200 rounded-full bg-primary hover:shadow-lg">Order
+        Now</a>
+    </div>
+  </nav>
+  <!-- End Main Navbar -->
 
-  <script src="assets/js/utils/loadBootstrap.js"></script>
+  <!-- payment section -->
+  <section>
+    <div class="container">
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details"> NAME :</span>
+              <input type="text border border-black-300" placeholder="name">
+            </div>
+            <div class="input-box">
+              <span class="details"> Phone Number :</span>
+              <input type="text border border-black-300" placeholder="phone-number">
+            </div>
+            <div class="input-box">
+              <span class="details"> Address :</span>
+              <input type="text border border-black-300" placeholder="address">
+            </div>
+          </div>
+        </form>
+        <div class="delivery">
+          <div class="delivery-service">
+            <div class="tittle">
+              <h6 class="font-bold">SELECT DELIVERY SERVICE:</h6>
+            </div>
+            <form action="#">
+              <h5>Juara Foods Delivery</h5>
+              <input type="radio" name="delivery" id="juarafoods">
+            </form>
+            <form action="#">
+              <h5>SELF-PICKUP</h5>
+              <input type="radio" name="delivery" id="self">
+            </form>
+          </div>
+
+        </div>
+        <div class="container-order">
+          <h2 class="font-bold">Order</h2>
+          <div class="card-image">
+            <img src="assets/images/misochicken.png" alt="">
+            <h6 class="font-bold">Miso Chicken x1</h6>
+            <h5 class="font-bold text-primary">Rp. 20.000</h5>
+          </div>
+          <div class="card-image">
+            <img src="assets/images/tempemendoan.png" alt="">
+            <h6 class="font-bold">Tempe Mendoan x1</h6>
+            <h5 class="font-bold text-primary">Rp. 12.000</h5>
+          </div>
+          <div class="sub-total">
+            <h6>SUBTOTAL: Rp. 32.000</h6>
+            <h6>DELIVERY: Rp. 10.000</h6>
+          </div>
+          <div class="total">
+            <h5 class="font-bold">TOTAL: Rp. 42.000</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
   <script src="assets/js/utils/component.js"></script>
 </body>
 
