@@ -4,10 +4,10 @@ class CardComponent extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["title", "image", "desc", "rating", "icon"];
+    return ["title", "image", "desc", "rating", "price"];
   }
 
-  coonnectedCallback() {
+  connectedCallback() {
     this.render();
   }
 
@@ -17,22 +17,44 @@ class CardComponent extends HTMLElement {
     }
   }
 
+  generateStars(rating) {
+    let stars = "";
+    for (let i = 0; i < 5; i++) {
+      stars += i < rating ? "<span>★</span>" : "<span>☆</span>";
+    }
+    return stars;
+  }
+
   render() {
     const title = this.getAttribute("title") || "Title";
     const image = this.getAttribute("image") || "";
     const desc = this.getAttribute("desc") || "Description";
-    const rating = this.getAttribute("rating") || 0;
-    const icon = this.getAttribute("icon") || "";
+    const rating = parseInt(this.getAttribute("rating")) || 0;
+    const price = this.getAttribute("price") || "";
 
     this.innerHTML = `
-      <div class="card" style="width: 18rem;">
-        <img src="assets/images/${image}" class="card-img-top" alt="${image}">
-        <div class="card-body">
-          <h4 class="card-title fw-semibold">${title}</h4>
-          <p class="card-text">${desc}</p>
+    <div class="mx-auto overflow-hidden bg-white border border-gray-200 rounded-2xl max-w-80 max-h-[120rem]">
+      <div class="relative">
+        <div class="flex items-center justify-center">
+          <img src="${image}" alt="Soto Banjar" class="relative w-64 -top-7">
         </div>
+        <button class="absolute p-3 text-gray-500 top-2 right-2">
+          <i class="text-2xl fa-regular fa-heart"></i>
+        </button>
       </div>
-    `;
+      <div class="p-4">
+        <h2 class="text-3xl font-semibold">${title}</h2>
+        <p class="text-xl text-gray-600">${price}</p>
+        <p class="mt-2 text-gray-500">${desc}</p>
+        <div class="flex items-center mt-2">
+          <div class="flex space-x-1 text-xl text-yellow-400">    
+            ${this.generateStars(rating)}
+          </div>
+        </div>
+        <button class="w-full py-2 mt-4 text-black bg-white border border-gray-300 rounded-full">BELI SEKARANG</button>
+      </div>
+    </div>
+        `;
   }
 }
 
