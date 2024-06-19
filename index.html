@@ -82,7 +82,7 @@
       <div class="relative justify-self-end">
         <div
           class="relative flex items-center justify-center overflow-hidden rounded-full bg-primary w-[25rem] h-[25rem]">
-          <img src="assets/images/sotoayam.png" alt="Main Food Image"
+          <img src="assets/images/menu/sotoayam.png" alt="Main Food Image"
             class="absolute left-0 z-50 object-cover w-full h-full transform scale-75 rounded-full -top-10">
         </div>
       </div>
@@ -90,24 +90,26 @@
     <div class="container mx-auto mt-16">
       <div class="grid grid-cols-5 gap-6 text-center">
         <div>
-          <img src="assets/images/nasipadang.png" alt="Nasi Padang" class="object-cover mx-auto rounded-full w-36 h-36">
+          <img src="assets/images/menu/nasipadang.png" alt="Nasi Padang" class="object-cover mx-auto rounded-full w-36">
           <h3 class="mt-4 text-lg font-semibold">Nasi Padang</h3>
         </div>
         <div>
-          <img src="assets/images/gadogado.png" alt="Gado-Gado" class="object-cover mx-auto rounded-full w-36 h-36">
+          <img src="assets/images/menu/gadogado.png" alt="Gado-Gado"
+            class="object-cover mx-auto rounded-full w-36 h-36">
           <h3 class="mt-4 text-lg font-semibold">Gado-Gado</h3>
         </div>
         <div>
-          <img src="assets/images/esacendol.png" alt="Es Cendol" class="object-cover mx-auto rounded-full w-36 h-36">
+          <img src="assets/images/menu/esacendol.png" alt="Es Cendol"
+            class="object-cover mx-auto rounded-full w-36 h-36">
           <h3 class="mt-4 text-lg font-semibold">Es Cendol</h3>
         </div>
         <div>
-          <img src="assets/images/misochicken.png" alt="Miso Chiken"
+          <img src="assets/images/menu/misochicken.png" alt="Miso Chiken"
             class="object-cover mx-auto rounded-full w-36 h-36">
           <h3 class="mt-4 text-lg font-semibold">Miso Chicken</h3>
         </div>
         <div>
-          <img src="assets/images/yakitori.png" alt="Yakitori" class="object-cover mx-auto rounded-full w-36 h-36">
+          <img src="assets/images/menu/yakitori.png" alt="Yakitori" class="object-cover mx-auto rounded-full w-36 h-36">
           <h3 class="mt-4 text-lg font-semibold">Yakitori</h3>
         </div>
       </div>
@@ -128,7 +130,7 @@
                 order</span></p>
             <p class="mt-4 text-xl">Rp.18.000</p>
           </div>
-          <img src="assets/images/rawon.png" alt="Rawon" class="absolute -top-2 -right-20">
+          <img src="assets/images/menu/rawon.png" alt="Rawon" class="absolute w-56 h-56 -right-20">
         </div>
         <!-- Sushi -->
         <div class="relative z-40 flex items-center justify-between p-6 text-white bg-black">
@@ -139,7 +141,7 @@
                 order</span></p>
             <p class="mt-4 text-xl">Rp.22.000</p>
           </div>
-          <img src="assets/images/sushi.png" alt="Sushi" class="absolute -right-28">
+          <img src="assets/images/menu/sushi.png" alt="Sushi" class="absolute w-56 h-56 -right-20">
         </div>
         <!-- Bakso and Es Teh -->
         <div class="relative z-40 flex items-center justify-between p-6 text-white bg-yellow-500 ">
@@ -152,9 +154,9 @@
 
           </div>
           <div class="">
-            <img src="assets/images/bakso.png" alt="Bakso and Es Teh"
+            <img src="assets/images/menu/bakso.png" alt="Bakso and Es Teh"
               class="relative z-20 transform scale-90 top-6 right-2">
-            <img src="assets/images/esteh.png" alt="Bakso and Es Teh"
+            <img src="assets/images/menu/esteh.png" alt="Bakso and Es Teh"
               class="absolute z-10 transform scale-90 right-28 -top-8">
           </div>
         </div>
@@ -164,29 +166,48 @@
   <!-- End Hero Section Banner -->
 
   <!-- Menu Section -->
-  <div class="container mx-auto mt-40">
-    <h1 class="mb-8 text-4xl font-bold text-center">Popular <span class="text-primary">Menus</span></h1>
+  <section class="container mx-auto mt-40">
+    <h1 class="mb-8 text-4xl font-bold text-center">Popular <span class="text-primary drop-shadow-lg">Menus</span></h1>
     <div class="flex justify-center mb-8 space-x-4">
-      <button class="px-4 py-2 text-white rounded-full bg-primary">Indonesian Foods</button>
-      <button
+      <button id="indonesia-btn" class="px-4 py-2 text-white rounded-full bg-primary">Indonesian Foods</button>
+      <button id="drinks-btn"
         class="px-4 py-2 transition-colors border border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">Drinks</button>
-      <button
+      <button id="japanese-btn"
         class="px-4 py-2 transition-colors border border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">Japanese
         Foods</button>
     </div>
-    <div class="grid grid-cols-3">
+    <div id="indonesia" class="grid grid-cols-3 mt-16">
       <card-component image="sotobanjar.png" title="Soto Banjar" desc="Lorem ipsum, dolor sit amet" price="15.000"
         rating="5"></card-component>
-      <card-component image="sotobanjar.png" title="Soto Banjar" desc="Lorem ipsum, dolor sit amet" price="15.000"
+      <card-component image="lontongsayur.png" title="Lontong Sayur" desc="Lorem ipsum, dolor sit amet" price="12.000"
+        rating="4"></card-component>
+      <card-component image="rendangsapi.png" title="Rendang Sapi" desc="Lorem ipsum, dolor sit amet" price="25.000"
         rating="5"></card-component>
     </div>
-  </div>
+    <div id="drinks" class="grid hidden grid-cols-3 mt-16">
+      <card-component image="misochicken.png" title="Soto Banjar" desc="Lorem ipsum, dolor sit amet" price="15.000"
+        rating="5"></card-component>
+      <card-component image="sushi.png" title="Lontong Sayur" desc="Lorem ipsum, dolor sit amet" price="12.000"
+        rating="4"></card-component>
+      <card-component image="yakitori.png" title="Rendang Sapi" desc="Lorem ipsum, dolor sit amet" price="25.000"
+        rating="5"></card-component>
+    </div>
+    <div id="japanese" class="grid hidden grid-cols-3 mt-16">
+      <card-component image="sushi.png" title="Sushi" desc="Lorem ipsum, dolor sit amet" price="21.000"
+        rating="5"></card-component>
+      <card-component image="tunaonigiri.png" title="Tuna Onigiri" desc="Lorem ipsum, dolor sit amet" price="25.000"
+        rating="4"></card-component>
+      <card-component image="karaage.png" title="Karaage" desc="Lorem ipsum, dolor sit amet" price="20.000"
+        rating="5"></card-component>
+    </div>
+  </section>
 
   </div>
 
 
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
   <script src="assets/js/utils/component.js"></script>
+  <script src="assets/js/utils/menu.js"></script>
 </body>
 
 </html>

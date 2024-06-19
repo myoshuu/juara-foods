@@ -33,10 +33,10 @@ class CardComponent extends HTMLElement {
     const price = this.getAttribute("price") || "15.000";
 
     this.innerHTML = `
-    <div class="mx-auto overflow-hidden bg-white border border-gray-200 rounded-2xl max-w-80 max-h-[120rem]">
+    <div class="mx-auto overflow-hidden bg-white border border-gray-200 rounded-2xl max-w-80 min-h-[30rem]">
       <div class="relative">
         <div class="flex items-center justify-center">
-          <img src="assets/images/${image}" alt="Soto Banjar" class="relative w-64 -top-7">
+          <img src="assets/images/menu/${image}" alt="Soto Banjar" class="w-52 h-52 mt-8">
         </div>
         <button class="absolute p-3 text-gray-500 top-2 right-2">
           <i class="text-2xl fa-regular fa-heart"></i>
