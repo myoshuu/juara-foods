@@ -17,13 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
           menu.classList.remove("hidden");
           button.classList.add("bg-primary", "text-white", "border-primary");
           button.classList.remove("bg-white", "text-primary-slate-500");
-          if (id === "indonesia-btn") button.classList.add("border-2");
         } else {
           menu.classList.add("hidden");
           button.classList.remove("bg-primary", "text-white", "border-primary");
           button.classList.add("bg-white", "text-primary-slate-500");
         }
       });
+
+      if (btnId !== "indonesia-btn") {
+        document
+          .getElementById("indonesia-btn")
+          .classList.remove("border-primary");
+      } else {
+        document
+          .getElementById("indonesia-btn")
+          .classList.add("border-primary");
+      }
     });
   });
 });
