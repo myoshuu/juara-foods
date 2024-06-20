@@ -51,8 +51,219 @@
   </nav>
   <!-- End Main Navbar -->
 
+  <!-- our menu -->
+  <section id="menu">
+    <!-- Tittle & Search Bar -->
+    <div class="row">
+      <div class="tittle">
+        <h2 class="font-bold">
+          Our Menu
+        </h2>
+      </div>
+      <div class="search-bar">
+        <div class="relative w-[600px]">
+          <input type="email" placeholder="Enter Email Address"
+            class="p-2 pl-8 border border-gray-300 rounded-full pr-44 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+          <button
+            class="absolute right-0 px-8 py-3 mt-1 mr-1 text-white uppercase bg-black rounded-full -top-2">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- button -->
+    <div class="button-row">
+      <div class="flex justify-center mb-8 space-x-4">
+        <button id="indonesia-btn"
+          class="px-4 py-2 text-white transition-colors border-2 rounded-full border-primary bg-primary hover:bg-primary hover:border-primary hover:text-white">All Indonesian
+          Foods</button>
+        <button id="drinks-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">All Drinks</button>
+        <button id="japanese-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">All Japanese
+          Foods</button>
+        <button id="japanese-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">View All</button>
+      </div>
+    </div>
+
+    <!-- All Food Indonesia -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3">
+        <!-- baris pertama -->
+        <div class="soto-banjar">
+          <card-component image="sotobanjar.png" title="Soto Banjar" desc="Lorem ipsum, dolor sit amet" price="22.000"
+          rating="5"></card-component>
+        </div>
+        <div class="lontong-sayur">
+          <card-component image="lontongsayur.png" title="Lontong Sayur" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="4"></card-component>
+        </div>
+        <div class="rendang-sapi">
+          <card-component image="rendangsapi.png" title="Rendang Sapi" desc="Lorem ipsum, dolor sit amet" price="25.000"
+            rating="5"></card-component>
+
+        <!-- baris kedua -->
+        <div class="nasi-kuning">
+          <card-component image="nasikuning.png" title="Nasi" desc="Lorem ipsum, dolor sit amet" price="15.000"
+          rating="5"></card-component>
+        </div>
+        <div class="nila-bakar">
+          <card-component image="nilabakar.png" title="Nila Bakar" desc="Lorem ipsum, dolor sit amet" price="22.000"
+            rating="4"></card-component>
+        </div>
+        <div class="gado-gado">
+          <card-component image="gadogado.png" title="Gado-Gado" desc="Lorem ipsum, dolor sit amet" price="10.000"
+            rating="5"></card-component>
+
+        <!-- baris ketiga -->
+        <div class="rawon">
+          <card-component image="rawon.png" title="Rawon" desc="Lorem ipsum, dolor sit amet" price="20.000"
+          rating="5"></card-component>
+        </div>
+        <div class="Nasi-Padang">
+          <card-component image="nasipadang.png" title="Nasi Padang" desc="Lorem ipsum, dolor sit amet" price="10.000"
+            rating="4"></card-component>
+        </div>
+        <div class="tempe-mendoan">
+          <card-component image="tempemendoan.png" title="Rendang Sapi" desc="Lorem ipsum, dolor sit amet" price="12.000"
+            rating="5"></card-component>
+
+        <!-- baris keempat -->
+        <div class="bubur-ayam">
+          <card-component image="buburayam.png" title="Bubur Ayam" desc="Lorem ipsum, dolor sit amet" price="10.000"
+          rating="5"></card-component>
+        </div>
+        <div class="pempek-palembang">
+          <card-component image="pempekpalembang.png" title="Pempek Palembang" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="4"></card-component>
+        </div>
+        <div class="ayam-bakar">
+          <card-component image="ayambakar.png" title="Ayam Bakar" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="5"></card-component>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Drink -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3">
+        <!-- baris pertama -->
+        <div class="soju">
+          <card-component image="soju.png" title="Soju" desc="Lorem ipsum, dolor sit amet" price="25.000"
+          rating="5"></card-component>
+        </div>
+        <div class="eskelapa-muda">
+          <card-component image="kelapamuda.png" title="Es Kelapa Muda" desc="Lorem ipsum, dolor sit amet" price="8.000"
+            rating="4"></card-component>
+        </div>
+        <div class="matcha">
+          <card-component image="matcha.png" title="Matcha" desc="Lorem ipsum, dolor sit amet" price="10.000"
+            rating="5"></card-component>
+
+        <!-- baris kedua -->
+        <div class="lemon-tea">
+          <card-component image="lemontea.png" title="Lemon Tea" desc="Lorem ipsum, dolor sit amet" price="5.000"
+          rating="5"></card-component>
+        </div>
+        <div class="air-mineral">
+          <card-component image="airmineral.png" title="Air Mineral" desc="Lorem ipsum, dolor sit amet" price="5.000"
+            rating="4"></card-component>
+        </div>
+        <div class="calpis">
+          <card-component image="calpis.png" title="Calpis" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="5"></card-component>
+
+        <!-- baris ketiga -->
+        <div class="es-teh">
+          <card-component image="esteh.png" title="Es Teh" desc="Lorem ipsum, dolor sit amet" price="3.000"
+          rating="5"></card-component>
+        </div>
+        <div class="es-cendol">
+          <card-component image="escendol.png" title="Es Cendol" desc="Lorem ipsum, dolor sit amet" price="10.000"
+            rating="4"></card-component>
+        </div>
+        <div class="mangonada">
+          <card-component image="mangonada.png" title="Mangonada" desc="Lorem ipsum, dolor sit amet" price="22.000"
+            rating="5"></card-component>
+
+        <!-- baris keempat -->
+        <div class="strawberry-milk">
+          <card-component image="strawberrymilk.png" title="Strawberry Milk" desc="Lorem ipsum, dolor sit amet" price="20.000"
+          rating="5"></card-component>
+        </div>
+        <div class="jus-semangka">
+          <card-component image="jussemangka.png" title="Jus Semangka" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="4"></card-component>
+        </div>
+        <div class="jus-buah-naga">
+          <card-component image="jusbuahnaga.png" title="Jus Buah Naga" desc="Lorem ipsum, dolor sit amet" price="10.000"
+            rating="5"></card-component>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Food Japanese -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3">
+        <!-- baris pertama -->
+        <div class="mis-chicken">
+          <card-component image="misochicken.png" title="Miso Chicken" desc="Lorem ipsum, dolor sit amet" price="20.000"
+          rating="5"></card-component>
+        </div>
+        <div class="Yakitori">
+          <card-component image="yakitori.png" title="Yakitori" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="4"></card-component>
+        </div>
+        <div class="Sushi">
+          <card-component image="sushi.png" title="Sushi" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="5"></card-component>
+
+        <!-- baris kedua -->
+        <div class="tempura">
+          <card-component image="tempura.png" title="Tempura" desc="Lorem ipsum, dolor sit amet" price="18.000"
+          rating="5"></card-component>
+        </div>
+        <div class="ramen">
+          <card-component image="ramen.png" title="Ramen" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="4"></card-component>
+        </div>
+        <div class="Gyoza">
+          <card-component image="gyoza.png" title="Gyoza" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="5"></card-component>
+
+        <!-- baris ketiga -->
+        <div class="chicken-katsu">
+          <card-component image="chickenkatsu.png" title="Chicken Katsu" desc="Lorem ipsum, dolor sit amet" price="18.000"
+          rating="5"></card-component>
+        </div>
+        <div class="miso-soup">
+          <card-component image="misosoup.png" title="Miso Soup" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="4"></card-component>
+        </div>
+        <div class="Dorayaki">
+          <card-component image="dorayaki.png" title="Dorayaki" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="5"></card-component>
+
+        <!-- baris keempat -->
+        <div class="tuna-onigiri">
+          <card-component image="tunaonigiri.png" title="Tuna Onigiri" desc="Lorem ipsum, dolor sit amet" price="20.000"
+          rating="5"></card-component>
+        </div>
+        <div class="Tamogoyaki">
+          <card-component image="tamogoyaki.png" title="Tamogoyaki" desc="Lorem ipsum, dolor sit amet" price="15.000"
+            rating="4"></card-component>
+        </div>
+        <div class="karaage">
+          <card-component image="karaage.png" title="Karaage" desc="Lorem ipsum, dolor sit amet" price="18.000"
+            rating="5"></card-component>
+        </div>
+      </div>
+    </div>
+
+
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
-  <script src="assets/js/utils/component.js"></script>
+  <script src="../assets/js/utils/component.js"></script>
+  <script src="../assets/js/utils/menu.js"></script>
 </body>
 
 </html>
