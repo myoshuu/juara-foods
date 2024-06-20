@@ -6,43 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transaction</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .form-radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      color: #d1d5db;
+      width: 1.25em;
+      height: 1.25em;
+      border: 0.1em solid #d1d5db;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+    }
+
+    .form-radio::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em #e3342f;
+      background-color: CanvasText;
+    }
+
+    .form-radio:checked::before {
+      transform: scale(1);
+    }
+  </style>
 </head>
-
-<style>
-  .form-radio {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    margin: 0;
-    color: #d1d5db;
-    width: 1.25em;
-    height: 1.25em;
-    border: 0.1em solid #d1d5db;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
-  }
-
-  .form-radio::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em #e3342f;
-    background-color: CanvasText;
-  }
-
-  .form-radio:checked::before {
-    transform: scale(1);
-  }
-</style>
 
 <body>
   <!-- Upper Nav -->
-  <div class="px-8 mx-auto">
+  <div class="px-8 mx-auto" data-aos="fade-down">
     <div class="py-4 border-b-2 text-end px-11">
       <a href="#" class="text-black">About us</a> <span class="px-2 text-slate-300">|</span>
       <a href="#" class="text-black">Contact Us</a> <span class="px-2 text-slate-300">|</span>
@@ -52,7 +52,7 @@
   <!-- End Upper Nav -->
 
   <!-- Main Navbar -->
-  <nav class="container flex items-center justify-between mx-auto mt-4">
+  <nav class="container flex items-center justify-between mx-auto mt-4" data-aos="fade-down" data-aos-delay="200">
     <div class="flex items-center">
       <img class="w-40 mr-14" src="../assets/images/logo.png" alt="">
       <ul class="flex items-center text-lg gap-x-16">
@@ -83,30 +83,28 @@
   </nav>
   <!-- End Main Navbar -->
 
-  <div class="container grid grid-cols-1 gap-8 mx-auto mt-16 lg:grid-cols-3">
+  <div class="container grid grid-cols-1 gap-8 mx-auto mt-16 lg:grid-cols-3" data-aos="fade-up">
     <!-- Form Section -->
     <div class="p-8 lg:col-span-2">
       <form class="space-y-4">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <label for="name" class="block font-semibold">Name</label>
             <input type="text" id="name"
               class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <label for="phone" class="block font-semibold">Phone Number</label>
             <input type="text" id="phone"
               class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-delay="300">
           <label for="address" class="block font-semibold">Address</label>
-          <textarea
-            class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-
-          </textarea>
+          <textarea id="address"
+            class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-delay="400">
           <label class="block font-semibold">Select Delivery Service</label>
           <div class="flex items-center justify-between p-4 mt-1 border border-gray-300 rounded-lg cursor-pointer"
             onclick="document.getElementById('delivery').checked = true;">
@@ -126,9 +124,7 @@
               <label for="pickup" class="font-semibold cursor-pointer">SELF PICKUP</label>
               <p class="mt-3 text-sm font-semibold">Pickup instructions</p>
               <p class="text-sm text-gray-500">Store opening hours: 07:00 - 21:00. Your confirmation ID number,
-                <br>name,
-                and WA hp is required to pick up the package.
-              </p>
+                <br>name, and WA hp is required to pick up the package.</p>
             </div>
             <div class="flex items-center">
               <span class="mr-2">FREE</span>
@@ -136,7 +132,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-delay="500">
           <label class="block font-semibold">Select Payment Method</label>
           <div class="flex flex-wrap gap-4 mt-2">
             <div class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer"
@@ -165,7 +161,7 @@
       </form>
     </div>
     <!-- Order Summary Section -->
-    <div class="p-8 bg-white shadow-lg rounded-2xl">
+    <div class="p-8 bg-white shadow-lg rounded-2xl" data-aos="fade-up" data-aos-delay="600">
       <h2 class="mb-6 text-2xl font-bold">Order</h2>
       <div class="space-y-4">
         <div class="flex items-center justify-between pb-4 border-b">
@@ -205,7 +201,10 @@
   </div>
 
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
-  <script src="assets/js/utils/component.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
   <!-- Upper Nav -->
-  <div class="px-8 mx-auto">
+  <div class="px-8 mx-auto" data-aos="fade-down">
     <div class="py-4 border-b-2 text-end px-11">
       <a href="#" class="text-black">About us</a> <span class="px-2 text-slate-300">|</span>
       <a href="#" class="text-black">Contact Us</a> <span class="px-2 text-slate-300">|</span>
@@ -20,9 +21,9 @@
   <!-- End Upper Nav -->
 
   <!-- Main Navbar -->
-  <nav class="container flex items-center justify-between mx-auto mt-4">
+  <nav class="container flex items-center justify-between mx-auto mt-4" data-aos="fade-down" data-aos-delay="200">
     <div class="flex items-center">
-      <img class="w-40 mr-14" src="assets/images/logo.png" alt="">
+      <img class="w-40 mr-14" src="../assets/images/logo.png" alt="">
       <ul class="flex items-center text-lg gap-x-16">
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
@@ -51,67 +52,157 @@
   </nav>
   <!-- End Main Navbar -->
 
-  <!-- Layanan Section -->
-   <section id="layanan">
-    <div class="col-12">
-        <div class="phone">
-            <h2 class="font-bold">Phone</h2>
-            <img src="#" alt="">
-            <a href="#">+62-817-4423-2323</a>
+  <!-- Contact Info Section -->
+  <section class="py-12 mt-16 text-white bg-gray-800" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h1 class="mb-8 text-4xl font-bold">Contact <span class="text-red-500">Us</span></h1>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="flex items-center justify-center w-24 h-24 p-6 mb-4 bg-red-500 rounded-full">
+            <i class="text-3xl fas fa-phone-alt"></i>
+          </div>
+          <p class="text-xl font-semibold">Phone</p>
+          <p class="mt-2">+62-817-4423-2323</p>
         </div>
-        <div class="email">
-            <h2 class="font-bold">Email</h2>
-            <img src="#" alt="">
-            <a href="#">juarafood@gmail.com</a>
+        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+          <div class="flex items-center justify-center w-24 h-24 p-6 mb-4 bg-red-500 rounded-full">
+            <i class="text-3xl fas fa-envelope"></i>
+          </div>
+          <p class="text-xl font-semibold">Email</p>
+          <p class="mt-2">juarafoods@gmail.com</p>
         </div>
-        <div class="address">
-            <h2 class="font-bold">Address</h2>
-            <img src="#" alt="">
-            <a href="#">Jalan Diponegoro No. 45 Kelurahan Mangunsari, Kecamatan Sidomukti Kota Salatiga</a>
+        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
+          <div class="flex items-center justify-center w-24 h-24 p-6 mb-4 bg-red-500 rounded-full">
+            <i class="text-3xl fas fa-map-marker-alt"></i>
+          </div>
+          <p class="text-xl font-semibold">Address</p>
+          <p class="mt-2 text-center">Jalan Diponegoro No. 45 Kelurahan Mangunsari, Kecamatan Sidomukti, Kota Salatiga.
+          </p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <div class="container">
-        <div class="tittle">
-            <h2 class="font-bold">Send us a message</h2>
+  <!-- Contact Form Section -->
+  <section class="container py-12 mx-auto" data-aos="fade-up" data-aos-delay="400">
+    <div class="p-8">
+      <h2 class="mb-8 text-3xl font-bold text-center">Send us a message</h2>
+      <form class="space-y-6">
+        <div>
+          <label for="name" class="block text-lg font-semibold">Name</label>
+          <input type="text" id="name"
+            class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
         </div>
-        <form action="">
-            <div class="row50">
-                <div class="inputbox">
-                    <span>Name :</span>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="row25">
-                <div class="inputbox">
-                    <span>Email Address :</span>
-                    <input type="text">
-                </div>
-                <div class="inputbox">
-                    <span>Phone Number :</span>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="row100">
-                <div class="inputbox">
-                    <span>Message :</span>
-                    <input type="text">
-                </div>
-            </div>
-        </form>
-
-        <div class="button">
-            <button class="text-primary">Send</button>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div>
+            <label for="email" class="block text-lg font-semibold">Email Address</label>
+            <input type="email" id="email"
+              class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div>
+            <label for="phone" class="block text-lg font-semibold">Phone Number</label>
+            <input type="text" id="phone"
+              class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          </div>
         </div>
+        <div>
+          <label for="message" class="block text-lg font-semibold">Message</label>
+          <textarea id="message" rows="6"
+            class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit"
+            class="px-12 py-3 font-semibold text-white bg-red-500 rounded-full hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">Send</button>
+        </div>
+      </form>
     </div>
-   </section>
+  </section>
 
-   <!-- Footer start -->
+  <!-- Footer Section -->
+  <footer class="mt-40 bg-[#1E1E1E] pt-10 rounded-t-3xl">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between gap-x-28" data-aos="fade-up">
+        <img class="object-contain w-40 mr-14" src="../assets/images/logoputih.png" alt="">
+        <div class="flex mt-5 mb-6">
+          <div class="relative w-[600px]">
+            <input type="email" placeholder="Enter Email Address"
+              class="p-2 pl-8 border border-gray-300 rounded-full pr-44 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+            <button
+              class="absolute right-0 px-8 py-3 mt-1 mr-1 text-white uppercase bg-black rounded-full -top-2">Send</button>
+          </div>
+        </div>
+        <img class="object-contain w-40 opacity-0 mr-14" src="../assets/images/logoputih.png" alt="">
+      </div>
+      <div class="grid grid-cols-4 mx-40 mt-10" data-aos="fade-up">
+        <div class="text-secondary">
+          <h3 class="text-2xl font-semibold">Quick links</h3>
+          <ul class="mt-8 space-y-6 text-xl">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Order Food</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="text-secondary">
+          <h3 class="text-2xl font-semibold">Our Menus</h3>
+          <ul class="mt-8 space-y-6 text-xl">
+            <li><a href="#">Ikan Bakar</a></li>
+            <li><a href="#">Nasi Kuning</a></li>
+            <li><a href="#">Es Cendol</a></li>
+            <li><a href="#">Sushi</a></li>
+          </ul>
+        </div>
+        <div class="text-secondary justify-self-center">
+          <h3 class="text-2xl font-semibold">Get in Touch</h3>
+          <div class="mt-8 space-y-4 text-[15px]">
+            <div class="flex items-start gap-x-5">
+              <img class="object-contain" src="../assets/icon/location.png" alt="">
+              <p>Jalan Diponegoro No. 45 Kelurahan Mangunsari, Kecamatan Sidomukti, Kota Salatiga,.</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/telp.png" alt="">
+              <p>+62-817-4423-2323</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/mail.png" alt="">
+              <p>juarafood@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-secondary justify-self-end">
+          <h3 class="text-2xl font-semibold">Social Media</h3>
+          <div class="mt-8 space-y-4 text-[15px]">
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/ri_instagram-fill.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/ic_outline-facebook.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/simple-icons_gojek.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16">
+      <div class="flex justify-between px-10 py-4 text-sm text-center text-white bg-black">
+        <p>&copy; 2024 Juara Foods. All Rights Reserved</p>
+        <p><a href="#" class="hover:underline">Privacy Policy</a> | <a href="#" class="hover:underline">Terms of Use</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
 
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
-  <script src="assets/js/utils/component.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
