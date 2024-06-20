@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
   <!-- End Upper Nav -->
 
   <!-- Main Navbar -->
-  <nav class="container flex items-center justify-between mx-auto mt-4">
+  <nav class="container flex items-center justify-between mx-auto mt-4" data-aos="fade-down">
     <div class="flex items-center">
       <img class="w-40 mr-14" src="../assets/images/logo.png" alt="">
       <ul class="flex items-center text-lg gap-x-16">
@@ -52,129 +53,222 @@
   <!-- End Main Navbar -->
 
   <!-- About Us section -->
-  <section id="aboutus">
-    <div class="container">
-      <!-- deskripsi -->
-      <div class="description">
-        <div class="card-image">
-          <div class="sec-image">
-            <img src="assets/images/seblak.png" alt="">
-          </div>
-          <div class="third-image">
-            <img src="assets/images/jamu.png" alt="">
-          </div>
-          <div class="main-image">
-            <img src="assets/images/seblakceker.png" alt="">
-          </div>
+  <section class="container flex justify-center mx-auto mt-16 gap-x-16">
+    <div class="max-w-md p-4" data-aos="fade-right">
+      <div class="grid grid-cols-[2fr_3fr] grid-rows-2 gap-4">
+        <div class="col-span-1 row-span-1">
+          <img src="../assets/images/seblak.png" alt="Image 1" class="w-full h-full rounded-lg ">
         </div>
-        <div class="tittle">
-          <h1 class="font-bold">About <span class="text-primary">JUARA</span> Food</h1>
+        <div class="col-span-1 row-span-2">
+          <img src="../assets/images/seblakceker.png" alt="Image 2" class="w-full h-full rounded-lg ">
         </div>
-        <p class="description">
-          Di Juara Food, kami menggabungkan kelezatan kuliner Indonesia dan Jepang untuk menghadirkan pengalaman makan
-          yang unik dan memuaskan. Kami percaya bahwa makanan dapat menyatukan budaya dan orang-orang, menciptakan
-          momen-momen berharga dan kenangan yang tak terlupakan.
-        </p>
-        <div class="button">
-          <button type="button">Order Now</button>
+        <div class="col-span-1 row-span-1">
+          <img src="../assets/images/jamu.png" alt="Image 3" class="w-full h-full rounded-lg ">
         </div>
       </div>
-      <!-- video trailer -->
-      <div class="trailer">
-        <div class="bg-trailer">
-          <img src="assets/images/bg makanan.png" alt="">
-        </div>
-        <div class="play-button">
-          <button>Play</button>
-        </div>
-        <div class="tittle">
-          <h2 class="font-bold">Watch The Video</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam, quod vel voluptates minus
-        </p>
+    </div>
+    <div class="max-w-2xl mt-5" data-aos="fade-left">
+      <div class="tittle">
+        <h1 class="text-4xl font-bold"><span class="text-primary drop-shadow-lg">JUARA</span> Foods</h1>
       </div>
-      <div class="award-winning">
-        <div class="image">
-          <img src="assets/images/foto chef.png" alt="">
+      <p class="mt-3 text-xl">
+        Di Juara Food, kami menggabungkan kelezatan kuliner Indonesia dan Jepang untuk menghadirkan pengalaman makan
+        yang unik dan memuaskan. Kami percaya bahwa makanan dapat menyatukan budaya dan orang-orang, menciptakan
+        momen-momen berharga dan kenangan yang tak terlupakan.
+      </p>
+      <button class="px-10 py-3 mt-8 border rounded-full shadow-full bg-yllw" type="button">Order Now</button>
+    </div>
+  </section>
+
+  <section class="relative mt-40">
+    <img src="../assets/images/bannerabout.png" alt="Dish" class="object-cover w-full rounded-lg shadow-lg h-[450px]"
+      data-aos="zoom-in">
+    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-lg bg-opacity-60">
+      <button class="p-4 mb-4 bg-yellow-500 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7L8 5z" />
+        </svg>
+      </button>
+      <h1 class="mt-5 mb-2 text-4xl font-bold text-white">Watch The Video</h1>
+      <p class="max-w-2xl text-2xl text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+        nulla
+        beatae ipsam, quod vel voluptates minus.</p>
+    </div>
+  </section>
+
+  <section class="container flex items-center justify-center mx-auto gap-x-28 mt-36" data-aos="fade-up">
+    <img class="w-[550px] object-contain" src="../assets/images/foto chef.png" alt="">
+    <div>
+      <h1 class="mb-8 text-5xl font-bold">Award Winning <br> <span class="text-primary drop-shadow-lg">Chef</span></h1>
+      <p class="max-w-2xl text-xl">
+        Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet vitae facilisi vel odio nisl.
+        Pellentesque malesuada massa proin cursus elit amet iaculis. <br> <br>
+        Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis. <br>
+        <br>
+        Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
+        Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
+      </p>
+      <button class="px-10 py-3 mt-10 border rounded-full shadow-full bg-yllw" type="button">Order Now</button>
+    </div>
+  </section>
+
+  <section class="py-20 mt-32 bg-slate-100">
+    <h1 class="text-4xl font-bold text-center" data-aos="fade-up">Our Costumer <span
+        class="text-primary drop-shadow-lg">Feedbacks</span>
+    </h1>
+    <p class="mt-5 text-lg text-center" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <br>Est nulla beatae
+      ipsam, quod vel
+      voluptates minus
+    </p>
+    <div class="flex items-center justify-center mt-12 gap-x-16" data-aos="fade-up">
+      <div class="relative max-w-lg p-8 bg-white shadow-md rounded-xl">
+        <div class="flex items-center mb-4">
+          <div class="flex space-x-1 text-yellow-500">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
         </div>
-        <div class="tittle">
-          <h1 class="font-bold">Award Winning <span class="text-primary">Chef</span></h1>
+        <p class="text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam,
+          quod vel voluptates minus.</p>
+        <div class="mt-10">
+          <p class="font-bold text-gray-900">Michael Jhon</p>
+          <p class="text-gray-500">Lorem</p>
         </div>
-        <p class="description">
-          Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet vitae facilisi vel odio nisl.
-          Pellentesque malesuada massa proin cursus elit amet iaculis.
-          Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
-          Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
-          Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
-        <div class="button">
-          <button type="button">Order Now</button>
-        </div>
+        <img src="../assets/images/pastel.png" alt="Dish" class="absolute bottom-0 right-0 rounded-full w-36 h-36">
       </div>
-      <div class="feedback">
-        <div class="tittle">
-          <h1 class="font-bold">Our Costumer <span class="text-primary">Feedbacks</span></h1>
-        </div>
-        <div class="description">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam, quod vel voluptates minus
-          </p>
-        </div>
-        <div class="box-1">
-          <div class="rating-stars">
-
-          </div>
-          <div class="comment-section">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam, quod vel voluptates minus
-          </div>
-          <div class="name">
-            <h6 class="font-bold"><small>Michael Jhon</small></h6>
-          </div>
-          <div class="image">
-            <img src="assets/images/pastel.png" alt="">
+      <div class="relative max-w-lg p-8 bg-white shadow-md rounded-xl">
+        <div class="flex items-center mb-4">
+          <div class="flex space-x-1 text-yellow-500">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
         </div>
-
-        <div class="box-2">
-          <div class="rating-stars">
-
-          </div>
-          <div class="comment-section">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam, quod vel voluptates minus
-          </div>
-          <div class="name">
-            <h6 class="font-bold"><small>Alex Smith</small></h6>
-          </div>
-          <div class="image">
-            <img src="assets/images/pastel.png" alt="">
-          </div>
+        <p class="text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla beatae ipsam,
+          quod vel voluptates minus.</p>
+        <div class="mt-10">
+          <p class="font-bold text-gray-900">Michael Jhon</p>
+          <p class="text-gray-500">Lorem</p>
         </div>
+        <img src="../assets/images/pastel.png" alt="Dish" class="absolute bottom-0 right-0 rounded-full w-36 h-36">
       </div>
     </div>
   </section>
 
   <!-- Foods Gallery -->
-  <section class="max-w-4xl py-12 mx-auto mt-40">
+  <section class="max-w-4xl py-12 mx-auto mt-40" data-aos="fade-up">
     <h1 class="mb-8 text-4xl font-bold text-center">Foods <span class="text-red-500">Gallery</span></h1>
     <div class="grid grid-cols-3 gap-4">
       <div class="flex flex-col col-span-1 space-y-4">
-        <img src="assets/images/bajigur.png" alt="Food 1" class="">
-        <img src="assets/images/misosoup.png" alt="Food 2" class="">
+        <img src="../assets/images/bajigur.png" alt="Food 1" class="">
+        <img src="../assets/images/misosoup.png" alt="Food 2" class="">
       </div>
       <div class="flex flex-col col-span-1 space-y-4">
-        <img src="assets/images/ramen.png" alt="Food 3" class="">
-        <img src="assets/images/indelcumi.png" alt="Food 4" class="">
+        <img src="../assets/images/ramen.png" alt="Food 3" class="">
+        <img src="../assets/images/indelcumi.png" alt="Food 4" class="">
       </div>
       <div class="flex flex-col col-span-1 space-y-4">
-        <img src="assets/images/chickenchasu.png" alt="Food 5" class="mt-24 ">
+        <img src="../assets/images/chickenchasu.png" alt="Food 5" class="mt-24 ">
         <div class="grid grid-cols-2 gap-4">
-          <img src="assets/images/mangga.png" alt="Food 6" class="">
-          <img src="assets/images/sopjagung.png" alt="Food 7" class="h-[200px]">
+          <img src="../assets/images/mangga.png" alt="Food 6" class="">
+          <img src="../assets/images/sopjagung.png" alt="Food 7" class="h-[200px]">
         </div>
       </div>
     </div>
   </section>
+  <!-- End Foods Gallery -->
+
+  <!-- Footer Section -->
+  <footer class="mt-40 bg-[#1E1E1E] pt-10 rounded-t-3xl">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between gap-x-28" data-aos="fade-up">
+        <img class="object-contain w-40 mr-14" src="../assets/images/logoputih.png" alt="">
+        <div class="flex mt-5 mb-6">
+          <div class="relative w-[600px]">
+            <input type="email" placeholder="Enter Email Address"
+              class="p-2 pl-8 border border-gray-300 rounded-full pr-44 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+            <button
+              class="absolute right-0 px-8 py-3 mt-1 mr-1 text-white uppercase bg-black rounded-full -top-2">Send</button>
+          </div>
+        </div>
+        <img class="object-contain w-40 opacity-0 mr-14" src="../assets/images/logoputih.png" alt="">
+      </div>
+      <div class="grid grid-cols-4 mx-40 mt-10" data-aos="fade-up">
+        <div class="text-secondary">
+          <h3 class="text-2xl font-semibold">Quick links</h3>
+          <ul class="mt-8 space-y-6 text-xl">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Order Food</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="text-secondary">
+          <h3 class="text-2xl font-semibold">Our Menus</h3>
+          <ul class="mt-8 space-y-6 text-xl">
+            <li><a href="#">Ikan Bakar</a></li>
+            <li><a href="#">Nasi Kuning</a></li>
+            <li><a href="#">Es Cendol</a></li>
+            <li><a href="#">Sushi</a></li>
+          </ul>
+        </div>
+        <div class="text-secondary justify-self-center">
+          <h3 class="text-2xl font-semibold">Get in Touch</h3>
+          <div class="mt-8 space-y-4 text-[15px]">
+            <div class="flex items-start gap-x-5">
+              <img class="object-contain" src="../assets/icon/location.png" alt="">
+              <p>Jalan Diponegoro No. 45 Kelurahan Mangunsari, Kecamatan Sidomukti, Kota Salatiga,.</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/telp.png" alt="">
+              <p>+62-817-4423-2323</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/mail.png" alt="">
+              <p>juarafood@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-secondary justify-self-end">
+          <h3 class="text-2xl font-semibold">Social Media</h3>
+          <div class="mt-8 space-y-4 text-[15px]">
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/ri_instagram-fill.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/ic_outline-facebook.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+            <div class="flex items-center gap-x-5">
+              <img class="object-contain" src="../assets/icon/simple-icons_gojek.png" alt="">
+              <p>JuaraFoods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16">
+      <div class="flex justify-between px-10 py-4 text-sm text-center text-white bg-black">
+        <p>&copy; 2024 Juara Foods. All Rights Reserved</p>
+        <p><a href="#" class="hover:underline">Privacy Policy</a> | <a href="#" class="hover:underline">Terms of Use</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
 
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="assets/js/utils/component.js"></script>
 </body>
 
