@@ -51,8 +51,61 @@
   </nav>
   <!-- End Main Navbar -->
 
+  <!-- our menu -->
+  <section id="menu">
+    <!-- Tittle & Search Bar -->
+    <div class="row">
+      <div class="tittle">
+        <h2 class="font-bold">
+          Our Menu
+        </h2>
+      </div>
+      <div class="search-bar">
+        <div class="relative w-[600px]">
+          <input type="email" placeholder="Enter Email Address"
+            class="p-2 pl-8 border border-gray-300 rounded-full pr-44 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+          <button
+            class="absolute right-0 px-8 py-3 mt-1 mr-1 text-white uppercase bg-black rounded-full -top-2">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- button -->
+    <div class="button-row">
+      <div class="flex justify-center mb-8 space-x-4">
+        <button id="indonesia-btn"
+          class="px-4 py-2 text-white transition-colors border-2 rounded-full border-primary bg-primary hover:bg-primary hover:border-primary hover:text-white">All Indonesian
+          Foods</button>
+        <button id="drinks-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">All Drinks</button>
+        <button id="japanese-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">All Japanese
+          Foods</button>
+        <button id="japanese-btn"
+          class="px-4 py-2 transition-colors border-2 rounded-full text-primary-slate-500 hover:bg-primary hover:border-primary hover:text-white">View All</button>
+      </div>
+    </div>
+
+    <!-- Card Component -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3">
+        <div class="soto-banjar">
+          <card-component image="sotobanjar.png" title="Soto Banjar" desc="Lorem ipsum, dolor sit amet" price="15.000"
+          rating="5"></card-component>
+          <card-component image="lontongsayur.png" title="Lontong Sayur" desc="Lorem ipsum, dolor sit amet" price="12.000"
+          rating="4"></card-component>
+          <card-component image="rendangsapi.png" title="Rendang Sapi" desc="Lorem ipsum, dolor sit amet" price="25.000"
+          rating="5"></card-component>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
   <script src="assets/js/utils/component.js"></script>
+  <script src="assets/js/utils/menu.js"></script>
 </body>
 
 </html>
