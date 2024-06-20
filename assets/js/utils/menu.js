@@ -15,11 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (id === btnId) {
           menu.classList.remove("hidden");
-          button.classList.add("bg-primary", "text-white", "border-primary");
+          button.classList.add(
+            "bg-primary",
+            "text-white",
+            "border-primary",
+            "shadow-xl"
+          );
           button.classList.remove("bg-white", "text-primary-slate-500");
         } else {
           menu.classList.add("hidden");
-          button.classList.remove("bg-primary", "text-white", "border-primary");
+          button.classList.remove(
+            "bg-primary",
+            "text-white",
+            "border-primary",
+            "shadow-xl"
+          );
           button.classList.add("bg-white", "text-primary-slate-500");
         }
       });
@@ -27,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (btnId !== "indonesia-btn") {
         document
           .getElementById("indonesia-btn")
-          .classList.remove("border-primary");
+          .classList.remove("border-primary", "shadow-xl");
       } else {
         document
           .getElementById("indonesia-btn")
-          .classList.add("border-primary");
+          .classList.add("border-primary", "shadow-xl");
       }
     });
   });
