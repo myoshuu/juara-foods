@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const buttons = Object.keys(menus);
+  const allMenus = Object.values(menus);
 
   buttons.forEach((btnId) => {
     document.getElementById(btnId).addEventListener("click", () => {
@@ -34,6 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      document
+        .getElementById("view-all-btn")
+        .classList.remove(
+          "bg-primary",
+          "text-white",
+          "border-primary",
+          "shadow-xl"
+        );
+      document
+        .getElementById("view-all-btn")
+        .classList.add("bg-white", "text-primary-slate-500");
+
       if (btnId !== "indonesia-btn") {
         document
           .getElementById("indonesia-btn")
@@ -44,5 +57,32 @@ document.addEventListener("DOMContentLoaded", () => {
           .classList.add("border-primary", "shadow-xl");
       }
     });
+  });
+
+  document.getElementById("view-all-btn").addEventListener("click", () => {
+    allMenus.forEach((menuId) => {
+      const menu = document.getElementById(menuId);
+      menu.classList.remove("hidden");
+    });
+
+    buttons.forEach((btnId) => {
+      const button = document.getElementById(btnId);
+      button.classList.remove(
+        "bg-primary",
+        "text-white",
+        "border-primary",
+        "shadow-xl"
+      );
+      button.classList.add("bg-white", "text-primary-slate-500");
+    });
+
+    const viewAllBtn = document.getElementById("view-all-btn");
+    viewAllBtn.classList.add(
+      "bg-primary",
+      "text-white",
+      "border-primary",
+      "shadow-xl"
+    );
+    viewAllBtn.classList.remove("bg-white", "text-primary-slate-500");
   });
 });
