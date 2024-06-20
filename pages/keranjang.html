@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
   <!-- Main Navbar -->
   <nav class="container flex items-center justify-between mx-auto mt-4">
     <div class="flex items-center">
-      <img class="w-40 mr-14" src="assets/images/logo.png" alt="">
+      <img class="w-40 mr-14" src="../assets/images/logo.png" alt="">
       <ul class="flex items-center text-lg gap-x-16">
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
@@ -51,37 +51,61 @@
   </nav>
   <!-- End Main Navbar -->
 
-  <!-- cart section -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="images-group">
-          <div class="main-image">
-            <img src="assets/images/misochicken.png" width="23%" alt="">
-            <h1 class="fw-bold">Miso Chicken</h1>
-            <img src="assets/images/rating-chart.png" width="15%" alt="">
-            <h2 class="text-danger fw-bold">Rp. 20.000</h2>
-            <p>Di Juara Food, kami mengajak Anda untuk menikmati kelezatan autentik dari kuliner Indonesia dan Jepang.
-              Kami menyajikan beragam pilihan menu yang memadukan cita rasa tradisional dengan sentuhan modern, sehingga
-              setiap hidangan yang kami tawarkan mampu memuaskan selera Anda.</p>
-            <button>Add to cart</button>
-            <div class="credit">
-              <p><span class="fw-bold">SKU: </span>MC1234</p>
-            </div>
-            <div class="credit">
-              <p><span class="fw-bold">Category: </span>Japanese Foods</p>
-            </div>
-            <div class="credit">
-              <p><span class="fw-bold">Tags: </span>Japanese, Rice, Chicken</p>
-            </div>
-          </div>
-          <div class="card-image">
-            <img src="assets/images/misochicken.png" alt="">
-            <img src="assets/images/gadogado.png" alt="">
-            <img src="assets/images/nasipadang.png" alt="">
-            <img src="assets/images/yakitori.png" alt="">
-          </div>
+  <section class="container grid grid-cols-2 mx-auto mt-16 rounded-lg">
+    <div class="">
+      <img src="../assets/images/menu/misochicken.png" alt="Miso Chicken"
+        class="w-2/3 h-auto mx-auto rounded-lg bg-slate-300">
+      <div class="flex justify-center mt-8 gap-x-8">
+        <img src="../assets/images/menu/misochicken.png" alt="Miso Chicken"
+          class="w-16 h-16 rounded-lg cursor-pointer bg-slate-300">
+        <img src="../assets/images/menu/tempura.png" alt="Tempura"
+          class="w-16 h-16 rounded-lg cursor-pointer bg-slate-100">
+        <img src="../assets/images/menu/sushi.png" alt="Sushi" class="w-16 h-16 rounded-lg cursor-pointer bg-slate-100">
+        <img src="../assets/images/menu/ramen.png" alt="Ramen" class="w-16 h-16 rounded-lg cursor-pointer bg-slate-100">
+        <img src="../assets/images/menu/yakitori.png" alt="Yakitori"
+          class="w-16 h-16 rounded-lg cursor-pointer bg-slate-100">
+      </div>
+    </div>
+    <!-- Details Section -->
+    <div>
+      <h1 class="text-4xl font-bold">Miso Chicken</h1>
+      <div class="flex items-center my-4">
+        <div class="flex text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
         </div>
+        <span class="ml-2 text-gray-600">(120 Reviews)</span>
+      </div>
+      <p class="text-2xl font-bold text-primary">Rp. 20.000</p>
+      <p class="mt-4 text-gray-700">
+        Di Juara Food, kami mengajak Anda untuk menikmati kelezatan autentik dari kuliner Indonesia dan Jepang. Kami
+        menyajikan beragam pilihan menu yang memadukan cita rasa tradisional dengan sentuhan modern, sehingga setiap
+        hidangan yang kami tawarkan mampu memuaskan selera Anda.
+      </p>
+      <div class="flex items-center mt-6 space-x-4">
+        <div class="flex items-center px-2 py-2 border border-gray-300 rounded-full">
+          <button class="flex items-center justify-center w-8 h-8 text-white rounded-full bg-primary">
+            <i class="fas fa-plus"></i>
+          </button>
+          <span class="mx-8">1</span>
+          <button class="flex items-center justify-center w-8 h-8 text-white rounded-full bg-primary">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+        <button class="flex items-center justify-center w-10 h-10 text-gray-500 border border-gray-300 rounded-full">
+          <i class="text-2xl fa-regular fa-heart"></i>
+        </button>
+      </div>
+      <div class="mt-6">
+        <p><span class="font-semibold">SKU:</span> MC1234</p>
+        <p><span class="font-semibold">Category:</span> Japanese Foods</p>
+        <p><span class="font-semibold">Tags:</span> Japanese, Rice, Chicken</p>
+      </div>
+      <div class="text-right">
+        <button class="px-10 py-3 mt-8 border rounded-full shadow-full bg-yllw" type="button">Checkout</button>
       </div>
     </div>
   </section>

@@ -5,8 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transaction</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
+<style>
+  .form-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    color: #d1d5db;
+    width: 1.25em;
+    height: 1.25em;
+    border: 0.1em solid #d1d5db;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+
+  .form-radio::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #e3342f;
+    background-color: CanvasText;
+  }
+
+  .form-radio:checked::before {
+    transform: scale(1);
+  }
+</style>
 
 <body>
   <!-- Upper Nav -->
@@ -22,7 +54,7 @@
   <!-- Main Navbar -->
   <nav class="container flex items-center justify-between mx-auto mt-4">
     <div class="flex items-center">
-      <img class="w-40 mr-14" src="assets/images/logo.png" alt="">
+      <img class="w-40 mr-14" src="../assets/images/logo.png" alt="">
       <ul class="flex items-center text-lg gap-x-16">
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
@@ -51,65 +83,126 @@
   </nav>
   <!-- End Main Navbar -->
 
-  <!-- payment section -->
-  <section>
-    <div class="container">
-      <div class="content">
-        <form action="#">
-          <div class="user-details">
-            <div class="input-box">
-              <span class="details"> NAME :</span>
-              <input type="text border border-black-300" placeholder="name">
-            </div>
-            <div class="input-box">
-              <span class="details"> Phone Number :</span>
-              <input type="text border border-black-300" placeholder="phone-number">
-            </div>
-            <div class="input-box">
-              <span class="details"> Address :</span>
-              <input type="text border border-black-300" placeholder="address">
-            </div>
+  <div class="container grid grid-cols-1 gap-8 mx-auto mt-16 lg:grid-cols-3">
+    <!-- Form Section -->
+    <div class="p-8 lg:col-span-2">
+      <form class="space-y-4">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div>
+            <label for="name" class="block font-semibold">Name</label>
+            <input type="text" id="name"
+              class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
           </div>
-        </form>
-        <div class="delivery">
-          <div class="delivery-service">
-            <div class="tittle">
-              <h6 class="font-bold">SELECT DELIVERY SERVICE:</h6>
-            </div>
-            <form action="#">
-              <h5>Juara Foods Delivery</h5>
-              <input type="radio" name="delivery" id="juarafoods">
-            </form>
-            <form action="#">
-              <h5>SELF-PICKUP</h5>
-              <input type="radio" name="delivery" id="self">
-            </form>
+          <div>
+            <label for="phone" class="block font-semibold">Phone Number</label>
+            <input type="text" id="phone"
+              class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
           </div>
-
         </div>
-        <div class="container-order">
-          <h2 class="font-bold">Order</h2>
-          <div class="card-image">
-            <img src="assets/images/misochicken.png" alt="">
-            <h6 class="font-bold">Miso Chicken x1</h6>
-            <h5 class="font-bold text-primary">Rp. 20.000</h5>
+        <div>
+          <label for="address" class="block font-semibold">Address</label>
+          <textarea
+            class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+
+          </textarea>
+        </div>
+        <div>
+          <label class="block font-semibold">Select Delivery Service</label>
+          <div class="flex items-center justify-between p-4 mt-1 border border-gray-300 rounded-lg cursor-pointer"
+            onclick="document.getElementById('delivery').checked = true;">
+            <div>
+              <label for="delivery" class="font-semibold cursor-pointer"> <span
+                  class="text-primary box-shadow-lg">JUARA</span> FOODS DELIVERY</label>
+            </div>
+            <div class="flex items-center">
+              <span class="mr-2">Rp. 10.000</span>
+              <input type="radio" id="delivery" name="delivery" class="text-red-500 form-radio focus:ring-red-500"
+                checked>
+            </div>
           </div>
-          <div class="card-image">
-            <img src="assets/images/tempemendoan.png" alt="">
-            <h6 class="font-bold">Tempe Mendoan x1</h6>
-            <h5 class="font-bold text-primary">Rp. 12.000</h5>
+          <div class="flex items-start justify-between p-4 mt-2 border border-gray-300 rounded-lg cursor-pointer"
+            onclick="document.getElementById('pickup').checked = true;">
+            <div>
+              <label for="pickup" class="font-semibold cursor-pointer">SELF PICKUP</label>
+              <p class="mt-3 text-sm font-semibold">Pickup instructions</p>
+              <p class="text-sm text-gray-500">Store opening hours: 07:00 - 21:00. Your confirmation ID number,
+                <br>name,
+                and WA hp is required to pick up the package.
+              </p>
+            </div>
+            <div class="flex items-center">
+              <span class="mr-2">FREE</span>
+              <input type="radio" id="pickup" name="delivery" class="text-red-500 form-radio focus:ring-red-500">
+            </div>
           </div>
-          <div class="sub-total">
-            <h6>SUBTOTAL: Rp. 32.000</h6>
-            <h6>DELIVERY: Rp. 10.000</h6>
+        </div>
+        <div>
+          <label class="block font-semibold">Select Payment Method</label>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <div class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer"
+              onclick="document.getElementById('shopeepay').checked = true;">
+              <label class="mr-8" for="shopeepay">
+                <img src="../assets/images/shopeepay.png" alt="ShopeePay" class="h-16">
+              </label>
+              <input type="radio" id="shopeepay" name="payment" class="text-red-500 form-radio focus:ring-red-500">
+            </div>
+            <div class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer"
+              onclick="document.getElementById('ovo').checked = true;">
+              <label class="mr-8" for="ovo">
+                <img src="../assets/images/ovo.png" alt="OVO" class="h-16">
+              </label>
+              <input type="radio" id="ovo" name="payment" class="text-red-500 form-radio focus:ring-red-500">
+            </div>
+            <div class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer"
+              onclick="document.getElementById('gopay').checked = true;">
+              <label class="mr-8" for="gopay">
+                <img src="../assets/images/gopay.png" alt="GoPay" class="h-16">
+              </label>
+              <input type="radio" id="gopay" name="payment" class="text-red-500 form-radio focus:ring-red-500">
+            </div>
           </div>
-          <div class="total">
-            <h5 class="font-bold">TOTAL: Rp. 42.000</h5>
+        </div>
+      </form>
+    </div>
+    <!-- Order Summary Section -->
+    <div class="p-8 bg-white shadow-lg rounded-2xl">
+      <h2 class="mb-6 text-2xl font-bold">Order</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-4 border-b">
+          <div class="flex items-center">
+            <img src="../assets/images/menu/misochicken.png" alt="Miso Chicken" class="w-16 h-16 rounded-lg">
+            <div class="ml-4">
+              <p class="font-semibold">Miso Chicken</p>
+              <p class="text-gray-500">x 1</p>
+            </div>
           </div>
+          <p class="font-semibold text-red-500">Rp. 20.000</p>
+        </div>
+        <div class="flex items-center justify-between pb-4 border-b">
+          <div class="flex items-center">
+            <img src="../assets/images/menu/tempemendoan.png" alt="Tempe Mendoan" class="w-16 h-16 rounded-lg">
+            <div class="ml-4">
+              <p class="font-semibold">Tempe Mendoan</p>
+              <p class="text-gray-500">x 1</p>
+            </div>
+          </div>
+          <p class="font-semibold text-red-500">Rp. 12.000</p>
+        </div>
+        <div class="flex justify-between mt-4">
+          <p>Subtotal</p>
+          <p>Rp. 32.000</p>
+        </div>
+        <div class="flex justify-between">
+          <p>Delivery</p>
+          <p>Rp. 10.000</p>
+        </div>
+        <div class="flex justify-between mt-4 text-lg font-bold">
+          <p>Total</p>
+          <p>Rp. 42.000</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <script src="https://kit.fontawesome.com/14cfca22c7.js" crossorigin="anonymous"></script>
   <script src="assets/js/utils/component.js"></script>
